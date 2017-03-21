@@ -173,8 +173,8 @@ class Adafruit_TSL2561_Unified : public Adafruit_Sensor {
   Adafruit_TSL2561_Unified(uint8_t addr, int32_t sensorID = -1);
   boolean begin(void);
 
-  void     enable (void);
-  void     disable (void);
+  void     disable (void);  // Modification from Adafruit lib, changed to public to be able to disable sensor and save battery in sleep mode
+  void     enable (void);   // ie.
   
   /* TSL2561 Functions */
   void enableAutoRange(bool enable);
